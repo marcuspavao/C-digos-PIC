@@ -3462,9 +3462,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mainLCD.c: 28: INTCON2bits.RBPU = 1;
 "28
 [e = . . _INTCON2bits 2 1 -> -> 1 `i `uc ]
-[; ;mainLCD.c: 30: TRISB = 0b00011111;
+[; ;mainLCD.c: 30: TRISB = 0b11111111;
 "30
-[e = _TRISB -> -> 31 `i `uc ]
+[e = _TRISB -> -> 255 `i `uc ]
 [; ;mainLCD.c: 31: TRISC = 0b00000000;
 "31
 [e = _TRISC -> -> 0 `i `uc ]
@@ -3541,9 +3541,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mainLCD.c: 58: Lcd_Out(l, col, "1");
 "58
 [e ( _Lcd_Out (3 , , -> _l `uc -> _col `uc :s 1C ]
-[; ;mainLCD.c: 59: col = col + 1;
+[; ;mainLCD.c: 59: col++;
 "59
-[e = _col + _col -> 1 `i ]
+[e ++ _col -> 1 `i ]
 [; ;mainLCD.c: 60: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 "60
 [e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
@@ -3558,9 +3558,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mainLCD.c: 63: Lcd_Out(l, col, "2");
 "63
 [e ( _Lcd_Out (3 , , -> _l `uc -> _col `uc :s 2C ]
-[; ;mainLCD.c: 64: col = col + 1;
+[; ;mainLCD.c: 64: col++;
 "64
-[e = _col + _col -> 1 `i ]
+[e ++ _col -> 1 `i ]
 [; ;mainLCD.c: 65: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 "65
 [e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
@@ -3575,9 +3575,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mainLCD.c: 68: Lcd_Out(l, col, "3");
 "68
 [e ( _Lcd_Out (3 , , -> _l `uc -> _col `uc :s 3C ]
-[; ;mainLCD.c: 69: col = col + 1;
+[; ;mainLCD.c: 69: col++;
 "69
-[e = _col + _col -> 1 `i ]
+[e ++ _col -> 1 `i ]
 [; ;mainLCD.c: 70: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 "70
 [e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
@@ -3595,53 +3595,57 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mainLCD.c: 75: col = 0;
 "75
 [e = _col -> 0 `i ]
-[; ;mainLCD.c: 76: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 "76
-[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"77
 }
 [e :U 312 ]
-[; ;mainLCD.c: 77: }
-[; ;mainLCD.c: 79: if(col == 16 && l == 2){
-"79
+[; ;mainLCD.c: 76: }
+[; ;mainLCD.c: 78: if(col == 16 && l == 2){
+"78
 [e $ ! && == _col -> 16 `i == _l -> 2 `i 313  ]
 {
-[; ;mainLCD.c: 80: col = 0; l = 1;
-"80
+[; ;mainLCD.c: 79: col = 0; l = 1;
+"79
 [e = _col -> 0 `i ]
 [e = _l -> 1 `i ]
-"81
+"80
 }
 [e :U 313 ]
-[; ;mainLCD.c: 81: }
-[; ;mainLCD.c: 83: if(PORTBbits.RB4 == 0){
-"83
+[; ;mainLCD.c: 80: }
+[; ;mainLCD.c: 82: if(PORTBbits.RB4 == 0){
+"82
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 0 `i 314  ]
 {
-[; ;mainLCD.c: 84: Lcd_Cmd(24);
+[; ;mainLCD.c: 83: col = col - 1;
+"83
+[e = _col - _col -> 1 `i ]
+[; ;mainLCD.c: 84: Lcd_Out(l, col, " ");
 "84
-[e ( _Lcd_Cmd (1 -> -> 24 `i `uc ]
+[e ( _Lcd_Out (3 , , -> _l `uc -> _col `uc :s 4C ]
+[; ;mainLCD.c: 85: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 "85
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"86
 }
 [e :U 314 ]
-[; ;mainLCD.c: 85: }
-[; ;mainLCD.c: 87: asm(" clrwdt");
-"87
-[; <"  clrwdt ;# ">
+[; ;mainLCD.c: 86: }
+[; ;mainLCD.c: 88: asm(" clrwdt");
 "88
+[; <"  clrwdt ;# ">
+"89
 }
 [e :U 305 ]
 "50
 [e $U 306  ]
 [e :U 307 ]
-[; ;mainLCD.c: 88: }
-[; ;mainLCD.c: 89: return;
-"89
-[e $UE 304  ]
-[; ;mainLCD.c: 90: }
+[; ;mainLCD.c: 89: }
+[; ;mainLCD.c: 90: return;
 "90
+[e $UE 304  ]
+[; ;mainLCD.c: 91: }
+"91
 [e :UE 304 ]
 }
 [a 3C 51 0 ]
 [a 2C 50 0 ]
 [a 1C 49 0 ]
+[a 4C 32 0 ]

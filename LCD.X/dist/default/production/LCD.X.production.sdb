@@ -221,7 +221,7 @@
 "43
 [v main@col col `i  1 a 2 12 ]
 [v main@l l `i  1 a 2 10 ]
-"90
+"91
 } 0
 "119 C:\Users\pavao\OneDrive\Documentos\UFOP\CAM210-main\CAM210-main\LCD.X\flexlcd.h
 [v _Lcd_Out Lcd_Out `(v  1 e 1 0 ]

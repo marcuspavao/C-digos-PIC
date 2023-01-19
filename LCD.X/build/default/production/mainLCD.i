@@ -4621,7 +4621,7 @@ ADCON1 = 0b00001111;
 
 INTCON2bits.RBPU = 1;
 
-TRISB = 0b00011111;
+TRISB = 0b11111111;
 TRISC = 0b00000000;
 TRISD = 0b00000000;
 TRISE = 0b00000000;
@@ -4650,24 +4650,23 @@ col = 0;
 }
 if(PORTBbits.RB0 == 0){
 Lcd_Out(l, col, "1");
-col = col + 1;
+col++;
 _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 if(PORTBbits.RB1 == 0){
 Lcd_Out(l, col, "2");
-col = col + 1;
+col++;
 _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 if(PORTBbits.RB2 == 0){
 Lcd_Out(l, col, "3");
-col = col + 1;
+col++;
 _delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 
 if(col == 16){
 l = 2;
 col = 0;
-_delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 
 if(col == 16 && l == 2){
@@ -4675,7 +4674,9 @@ col = 0; l = 1;
 }
 
 if(PORTBbits.RB4 == 0){
-Lcd_Cmd(24);
+col = col - 1;
+Lcd_Out(l, col, " ");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 
 asm(" clrwdt");

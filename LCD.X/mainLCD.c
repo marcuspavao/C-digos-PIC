@@ -27,7 +27,7 @@ void main(void)
     //INTCON2 = 0b00000000;
     INTCON2bits.RBPU = 1; // Pull-up resistors
     // Input or Output
-    TRISB = 0b00011111; 
+    TRISB = 0b11111111; 
     TRISC = 0b00000000;
     TRISD = 0b00000000; 
     TRISE = 0b00000000;
@@ -56,24 +56,23 @@ void main(void)
         }
         if(BT1 == 0){
             Lcd_Out(l, col, "1");
-            col = col + 1;
+            col++;
             __delaywdt_ms(200);
         }
         if(BT2 == 0){
             Lcd_Out(l, col, "2");
-            col = col + 1;
+            col++;
             __delaywdt_ms(200);
         }
         if(BT3 == 0){
             Lcd_Out(l, col, "3");
-            col = col + 1;
+            col++;
             __delaywdt_ms(200);
         }
         
         if(col == 16){
             l = 2;
             col = 0;
-            __delaywdt_ms(200);
         }
         
         if(col == 16 && l == 2){
@@ -81,7 +80,9 @@ void main(void)
         }
         
         if(BACK == 0){
-        Lcd_Cmd(LCD_SHIFT_LEFT);  
+            col = col - 1;
+            Lcd_Out(l, col, " ");
+            __delaywdt_ms(200);
         }
         
         CLRWDT();   
