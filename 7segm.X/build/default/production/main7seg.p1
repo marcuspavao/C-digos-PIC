@@ -34,6 +34,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S265 . . . . ]
 "6648
 [v _INTCON2bits `VS265 ~T0 @X0 0 e@4081 ]
+"6537
+[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S263 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"6547
+[s S264 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S264 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"6536
+[u S262 `S263 1 `S264 1 ]
+[n S262 . . . ]
+"6558
+[v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
 "6699
 [s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S270 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -63,19 +74,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S39 . . . ]
 "1005
 [v _LATAbits `VS39 ~T0 @X0 0 e@3977 ]
-"1096
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"1106
-[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S44 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"1095
-[u S42 `S43 1 `S44 1 ]
-[n S42 . . . ]
-"1117
-[v _LATBbits `VS42 ~T0 @X0 0 e@3978 ]
-"26 display7s.h
-[v _display7s `(uc ~T0 @X0 0 ef1`uc ]
 "7 configbits.h
 [p x OSC=HS ]
 "8
@@ -2951,89 +2949,105 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;include\pic18.h: 193: unsigned char __t3rd16on(void);
 [; ;display7s.h: 26: unsigned char display7s(unsigned char v);
-"14 main7seg.c
+"10 main7seg.c
 [v _count `i ~T0 @X0 1 e ]
 [i _count
 -> 0 `i
 ]
-[; ;main7seg.c: 14: int count = 0;
-"15
+[v _flag `i ~T0 @X0 1 e ]
+[i _flag
+-> 0 `i
+]
+[; ;main7seg.c: 10: int count = 0, flag = 0;
+"11
 [v _tmp `uc ~T0 @X0 1 e ]
-[; ;main7seg.c: 15: unsigned char tmp;
+[; ;main7seg.c: 11: unsigned char tmp;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"17
+"14
 [v _main `(v ~T0 @X0 1 ef ]
-"18
+"15
 {
-[; ;main7seg.c: 17: void main(void)
-[; ;main7seg.c: 18: {
+[; ;main7seg.c: 14: void main(void)
+[; ;main7seg.c: 15: {
 [e :U _main ]
 [f ]
-[; ;main7seg.c: 22: TRISA = 0b00000000;
-"22
+[; ;main7seg.c: 17: TRISA = 0b00000000;
+"17
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main7seg.c: 23: TRISB = 0b00000001;
-"23
-[e = _TRISB -> -> 1 `i `uc ]
-[; ;main7seg.c: 24: TRISD = 0b00000000;
-"24
+[; ;main7seg.c: 18: TRISB = 0b00001111;
+"18
+[e = _TRISB -> -> 15 `i `uc ]
+[; ;main7seg.c: 19: TRISD = 0b00000000;
+"19
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main7seg.c: 25: PORTA = 0;
-"25
+[; ;main7seg.c: 20: PORTA = 0;
+"20
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;main7seg.c: 26: LATA = 0;
-"26
+[; ;main7seg.c: 21: LATA = 0;
+"21
 [e = _LATA -> -> 0 `i `uc ]
-[; ;main7seg.c: 27: PORTB = 0;
-"27
+[; ;main7seg.c: 22: PORTB = 0;
+"22
 [e = _PORTB -> -> 0 `i `uc ]
-[; ;main7seg.c: 28: LATB = 0;
-"28
+[; ;main7seg.c: 23: LATB = 0;
+"23
 [e = _LATB -> -> 0 `i `uc ]
-[; ;main7seg.c: 29: PORTD = 0;
-"29
+[; ;main7seg.c: 24: PORTD = 0;
+"24
 [e = _PORTD -> -> 0 `i `uc ]
-[; ;main7seg.c: 30: LATD = 0;
-"30
+[; ;main7seg.c: 25: LATD = 0;
+"25
 [e = _LATD -> -> 0 `i `uc ]
-[; ;main7seg.c: 32: ADCON1 = 0b00001111;
-"32
+[; ;main7seg.c: 27: ADCON1 = 0b00001111;
+"27
 [e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main7seg.c: 34: INTCON2bits.RBPU = 0;
-"34
+[; ;main7seg.c: 29: INTCON2bits.RBPU = 0;
+"29
 [e = . . _INTCON2bits 2 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 39: INTCON2bits.INTEDG0 = 0;
-"39
+[; ;main7seg.c: 31: INTCON2bits.INTEDG0 = 0;
+"31
 [e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
-[; ;main7seg.c: 41: INTCONbits.INT0IF = 0;
-"41
+[; ;main7seg.c: 33: INTCON3bits.INT1IF = 0;
+"33
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;main7seg.c: 34: INTCON3bits.INT1IE = 1;
+"34
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+[; ;main7seg.c: 36: INTCON3bits.INT2IF = 0;
+"36
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+[; ;main7seg.c: 37: INTCON3bits.INT2IE = 1;
+"37
+[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
+[; ;main7seg.c: 39: INTCONbits.INT0IF = 0;
+"39
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 43: INTCONbits.INT0IE = 1;
-"43
+[; ;main7seg.c: 40: INTCONbits.INT0IE = 1;
+"40
 [e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;main7seg.c: 45: INTCONbits.TMR0IF = 0;
-"45
+[; ;main7seg.c: 42: INTCONbits.TMR0IF = 0;
+"42
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main7seg.c: 47: INTCONbits.TMR0IE = 1;
-"47
+[; ;main7seg.c: 43: INTCONbits.TMR0IE = 1;
+"43
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;main7seg.c: 50: T0CON = 0b11000101;
-"50
+[; ;main7seg.c: 46: T0CON = 0b11000101;
+"46
 [e = _T0CON -> -> 197 `i `uc ]
-[; ;main7seg.c: 51: TMR0 = 131;
-"51
+[; ;main7seg.c: 47: TMR0 = 131;
+"47
 [e = _TMR0 -> -> 131 `i `us ]
-[; ;main7seg.c: 52: (INTCONbits.GIE = 1);
-"52
+[; ;main7seg.c: 48: (INTCONbits.GIE = 1);
+"48
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main7seg.c: 54: LATAbits.LATA2 = 1;
-"54
+[; ;main7seg.c: 50: LATAbits.LATA2 = 1;
+"50
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-[; ;main7seg.c: 55: while(1)
-"55
+[; ;main7seg.c: 51: while(1)
+"51
 [e :U 278 ]
-[; ;main7seg.c: 56: {
-"56
+[; ;main7seg.c: 52: {
+"52
 {
 [; ;main7seg.c: 57: asm(" clrwdt");
 "57
@@ -3041,7 +3055,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58
 }
 [e :U 277 ]
-"55
+"51
 [e $U 278  ]
 [e :U 279 ]
 [; ;main7seg.c: 58: }
@@ -3053,84 +3067,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 276 ]
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
-[v F2423 `(v ~T0 @X0 1 tf ]
-"68
-[v _isr `IF2423 ~T0 @X0 1 e ]
+[v F2424 `(v ~T0 @X0 1 tf ]
+"62
+[v _isr `IF2424 ~T0 @X0 1 e ]
 {
-[; ;main7seg.c: 68: void interrupt isr(void){
+[; ;main7seg.c: 62: void interrupt isr(void){
 [e :U _isr ]
 [f ]
-[; ;main7seg.c: 69: if (INTCONbits.INT0F == 1)
-"69
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 281  ]
-[; ;main7seg.c: 70: {
-"70
-{
-[; ;main7seg.c: 71: INTCONbits.INT0F = 0;
-"71
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 72: tmp = 0;
-"72
-[e = _tmp -> -> 0 `i `uc ]
-"73
-}
-[e :U 281 ]
-[; ;main7seg.c: 73: }
-[; ;main7seg.c: 74: if (INTCONbits.TMR0IF == 1)
-"74
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 282  ]
-[; ;main7seg.c: 75: {
-"75
-{
-[; ;main7seg.c: 76: INTCONbits.TMR0IF = 0;
-"76
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main7seg.c: 77: TMR0 = 131;
-"77
-[e = _TMR0 -> -> 131 `i `us ]
-[; ;main7seg.c: 78: count ++;
-"78
-[e ++ _count -> 1 `i ]
-[; ;main7seg.c: 79: if (count == 250)
-"79
-[e $ ! == _count -> 250 `i 283  ]
-[; ;main7seg.c: 80: {
-"80
-{
-[; ;main7seg.c: 81: count = 0;
-"81
-[e = _count -> 0 `i ]
-[; ;main7seg.c: 82: LATBbits.LATB1 = ~LATBbits.LATB1;
-"82
-[e = . . _LATBbits 0 1 -> ~ -> . . _LATBbits 0 1 `i `uc ]
-[; ;main7seg.c: 83: PORTD = display7s(tmp);
-"83
-[e = _PORTD ( _display7s (1 _tmp ]
-[; ;main7seg.c: 84: tmp++;
-"84
-[e ++ _tmp -> -> 1 `i `uc ]
-[; ;main7seg.c: 85: if (tmp > 15)
-"85
-[e $ ! > -> _tmp `i -> 15 `i 284  ]
-[; ;main7seg.c: 86: {
-"86
-{
-[; ;main7seg.c: 87: tmp = 0;
-"87
-[e = _tmp -> -> 0 `i `uc ]
-"88
-}
-[e :U 284 ]
-"89
-}
-[e :U 283 ]
-"91
-}
-[e :U 282 ]
-[; ;main7seg.c: 88: }
-[; ;main7seg.c: 89: }
-[; ;main7seg.c: 91: }
-[; ;main7seg.c: 92: }
-"92
+[; ;main7seg.c: 105: }
+"105
 [e :UE 280 ]
 }

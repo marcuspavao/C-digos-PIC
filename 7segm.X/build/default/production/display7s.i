@@ -1,7 +1,7 @@
 
 # 1 "display7s.c"
 
-# 35
+# 11
 unsigned char display7s(unsigned char v)
 {
 switch(v)

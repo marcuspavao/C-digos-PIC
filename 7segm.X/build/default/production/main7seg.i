@@ -4582,17 +4582,16 @@ unsigned char __t3rd16on(void);
 # 26 "display7s.h"
 unsigned char display7s(unsigned char v);
 
-# 14 "main7seg.c"
-int count = 0;
+# 10 "main7seg.c"
+int count = 0, flag = 0;
 unsigned char tmp;
+
 
 void main(void)
 {
 
-
-
 TRISA = 0b00000000;
-TRISB = 0b00000001;
+TRISB = 0b00001111;
 TRISD = 0b00000000;
 PORTA = 0;
 LATA = 0;
@@ -4605,17 +4604,18 @@ ADCON1 = 0b00001111;
 
 INTCON2bits.RBPU = 0;
 
-
-
-
 INTCON2bits.INTEDG0 = 0;
 
-INTCONbits.INT0IF = 0;
+INTCON3bits.INT1IF = 0;
+INTCON3bits.INT1IE = 1;
 
+INTCON3bits.INT2IF = 0;
+INTCON3bits.INT2IE = 1;
+
+INTCONbits.INT0IF = 0;
 INTCONbits.INT0IE = 1;
 
 INTCONbits.TMR0IF = 0;
-
 INTCONbits.TMR0IE = 1;
 
 
@@ -4626,34 +4626,16 @@ TMR0 = 131;
 LATAbits.LATA2 = 1;
 while(1)
 {
+
+
+
+
 asm(" clrwdt");
 }
 return;
 }
 
-# 68
 void interrupt isr(void){
-if (INTCONbits.INT0F == 1)
-{
-INTCONbits.INT0F = 0;
-tmp = 0;
-}
-if (INTCONbits.TMR0IF == 1)
-{
-INTCONbits.TMR0IF = 0;
-TMR0 = 131;
-count ++;
-if (count == 250)
-{
-count = 0;
-LATBbits.LATB1 = ~LATBbits.LATB1;
-PORTD = display7s(tmp);
-tmp++;
-if (tmp > 15)
-{
-tmp = 0;
-}
-}
 
-}
+# 105
 }

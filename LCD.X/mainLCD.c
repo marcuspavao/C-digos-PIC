@@ -1,8 +1,6 @@
 /*
- * File:   mainDeb.c
- * Author: Alan Kardek
- *
- * Created on 12 de Novembro de 2020, 12:13
+ * File:   mainLCD.c
+ * Author: Marcus Vinícius Fernandes Pavão de Souza
  */
 
 // Funciona na Placa Exto NEO201 e na PicGenios
@@ -81,6 +79,10 @@ void main(void)
         
         if(BACK == 0){
             col = col - 1;
+            if(col == -1 && l == 2){
+                l = 1;
+                col = 15;            
+            }
             Lcd_Out(l, col, " ");
             __delaywdt_ms(200);
         }

@@ -1,27 +1,3 @@
-/* ########################################################################
-
-   PICsim - PIC simulator http://sourceforge.net/projects/picsim/
-
-   ########################################################################
-
-   Copyright (c) : 2015  Luis Claudio Gambôa Lopes
-
-   This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; either version 2, or (at your option)
-   any later version.
-
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, write to the Free Software
-   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
-   For e-mail suggestions :  lcgamboa@yahoo.com
-   ######################################################################## */
 /*
 const char table[16]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x7F,0x6F,0x77,0x7C,0x58,0x5E,0x79,0x71};
 
