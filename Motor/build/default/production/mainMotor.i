@@ -1,5 +1,5 @@
 
-# 1 "main7seg.c"
+# 1 "mainMotor.c"
 
 
 # 7 "configbits.h"
@@ -4579,102 +4579,206 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 26 "display7s.h"
-unsigned char display7s(unsigned char v);
+# 71 "flexlcd.h"
+void Lcd_Init(void);
+void Lcd_Out(unsigned char y, unsigned char x, const char *buffer);
+void Lcd_Out2(unsigned char y, unsigned char x, char *buffer);
+void Lcd_Chr_CP(char data);
+void Lcd_Cmd(unsigned char data);
 
-# 10 "main7seg.c"
-int count = 0, flag = 0;
-unsigned char tmp;
-
-
-void main(void)
+void Lcd_Init(void){
+unsigned char data;
+TRISDbits.TRISD7 = 0;
+TRISDbits.TRISD6 = 0;
+TRISDbits.TRISD5 = 0;
+TRISDbits.TRISD4 = 0;
+TRISEbits.TRISE2 = 0;
+TRISEbits.TRISE1 = 0;
+PORTDbits.RD7 = 0;
+PORTDbits.RD6 = 0;
+PORTDbits.RD5 = 0;
+PORTDbits.RD4 = 0;
+PORTEbits.RE1 = 0;
+PORTEbits.RE2 = 0;
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+for(data = 1; data < 4; data ++)
 {
-
-TRISA = 0b00000000;
-TRISB = 0b00001111;
-TRISD = 0b00000000;
-PORTA = 0;
-LATA = 0;
-PORTB = 0;
-LATB = 0;
-PORTD = 0;
-LATD = 0;
-
-ADCON1 = 0b00001111;
-
-INTCON2bits.RBPU = 0;
-
-INTCON2bits.INTEDG0 = 0;
-
-INTCON3bits.INT1IF = 0;
-INTCON3bits.INT1IE = 1;
-
-INTCON3bits.INT2IF = 0;
-INTCON3bits.INT2IE = 1;
-
-INTCONbits.INT0IF = 0;
-INTCONbits.INT0IE = 1;
-
-INTCONbits.TMR0IF = 0;
-INTCONbits.TMR0IE = 1;
+PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1; PORTEbits.RE1 = 0;
+PORTEbits.RE2 = 0; PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1;
+PORTEbits.RE1 = 1; PORTEbits.RE2 = 0;
+_delay((unsigned long)((5)*(8000000/4000000.0)));
+PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1; PORTEbits.RE1 = 0;
+PORTEbits.RE2 = 0;
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+}
+PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 1; PORTEbits.RE2 = 0;
+_delay((unsigned long)((5)*(8000000/4000000.0)));
+PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+data = 40; Lcd_Cmd(data);
+data = 16; Lcd_Cmd(data);
+data = 1; Lcd_Cmd(data);
+data = 15; Lcd_Cmd(data);
+}
 
 
-T0CON = 0b11000101;
-TMR0 = 131;
-(INTCONbits.GIE = 1);
-
-LATAbits.LATA2 = 1;
-while(1)
+void Lcd_Out(unsigned char y, unsigned char x, const char *buffer)
 {
-
-
-
-
-asm(" clrwdt");
+unsigned char data;
+switch (y)
+{
+case 1: data = 128 + x; break;
+case 2: data = 192 + x; break;
+case 3: data = 148 + x; break;
+case 4: data = 212 + x; break;
+default: break;
+}
+Lcd_Cmd(data);
+while(*buffer)
+{
+Lcd_Chr_CP(*buffer);
+buffer++;
 }
 return;
 }
 
+
+void Lcd_Out2(unsigned char y, unsigned char x, char *buffer)
+{
+unsigned char data;
+switch (y)
+{
+case 1: data = 128 + x; break;
+case 2: data = 192 + x; break;
+case 3: data = 148 + x; break;
+case 4: data = 212 + x; break;
+default: break;
+}
+Lcd_Cmd(data);
+while(*buffer)
+{
+Lcd_Chr_CP(*buffer);
+buffer++;
+}
+return;
+}
+
+
+void Lcd_Chr_CP(char data){
+PORTEbits.RE1 = 0; PORTEbits.RE2 = 1;
+PORTDbits.RD7 = (data & 0b10000000)>>7; PORTDbits.RD6 = (data & 0b01000000)>>6;
+PORTDbits.RD5 = (data & 0b00100000)>>5; PORTDbits.RD4 = (data & 0b00010000)>>4;
+_delay(10);
+PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+PORTDbits.RD7 = (data & 0b00001000)>>3; PORTDbits.RD6 = (data & 0b00000100)>>2;
+PORTDbits.RD5 = (data & 0b00000010)>>1; PORTDbits.RD4 = (data & 0b00000001);
+_delay(10);
+PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+_delay((unsigned long)((5)*(8000000/4000000.0))); _delay((unsigned long)((5500)*(8000000/4000000.0)));
+}
+
+
+void Lcd_Cmd(unsigned char data){
+PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+PORTDbits.RD7 = (data & 0b10000000)>>7; PORTDbits.RD6 = (data & 0b01000000)>>6;
+PORTDbits.RD5 = (data & 0b00100000)>>5; PORTDbits.RD4 = (data & 0b00010000)>>4;
+_delay(10);
+PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+PORTDbits.RD7 = (data & 0b00001000)>>3; PORTDbits.RD6 = (data & 0b00000100)>>2;
+PORTDbits.RD5 = (data & 0b00000010)>>1; PORTDbits.RD4 = (data & 0b00000001);
+_delay(10);
+PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+_delay((unsigned long)((5500)*(8000000/4000000.0)));
+}
+
+# 17 "mainMotor.c"
+void main(void)
+{
+ADCON0 = 0b00000000;
+ADCON1 = 0b00001111;
+
+
+
+INTCON2bits.RBPU = 1;
+
+TRISB = 0b11111111;
+TRISC = 0b00000000;
+TRISD = 0b00000000;
+TRISE = 0b00000000;
+
+INTCON2bits.INTEDG0 = 0;
+
+INTCONbits.INT0IF = 0;
+INTCONbits.INT0IE = 1;
+
+INTCON3bits.INT1IF = 0;
+INTCON3bits.INT1IE = 1;
+
+PORTB = 0;
+LATB = 0;
+PORTC = 0;
+LATC = 0;
+PORTD = 0;
+LATD = 0;
+PORTE = 0;
+LATE = 0;
+
+int col, l;
+col = 0;
+l = 1;
+Lcd_Init();
+Lcd_Cmd(12);
+Lcd_Out(1, 0, "Motor 1: OFF");
+Lcd_Out(2, 0, "Motor 2: OFF");
+(INTCONbits.GIE = 1);
+while(1)
+{
+
+if(PORTBbits.RB3 == 0){
+Lcd_Cmd(1);
+Lcd_Out(l, 0, "Marcus");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));
+}
+
+asm(" clrwdt");
+}
+return;
+
+}
+
 void interrupt isr(void){
-if (INTCONbits.INT0F == 1)
-{
-INTCONbits.INT0F = 0;
-tmp = 0;
-flag = 1;
-}
-if(INTCON3bits.INT2IF == 1)
-{
-INTCON3bits.INT2IF = 0;
-LATD = display7s(tmp);
-tmp++;
-}
 if(INTCON3bits.INT1IF == 1)
 {
 INTCON3bits.INT1IF = 0;
-tmp = tmp - 1;
-LATD = display7s(tmp);
+if(PORTEbits.RE0 == 0){
+PORTEbits.RE0 = ~PORTEbits.RE0;
+Lcd_Out(2, 0, "Motor 2: ON ");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));}
+else{
+PORTEbits.RE0 = ~PORTEbits.RE0;
+Lcd_Out(2, 0, "Motor 2: OFF");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
-if (INTCONbits.TMR0IF == 1)
-{
-INTCONbits.TMR0IF = 0;
-TMR0 = 131;
-count ++;
-if (count == 250)
-{
-count = 0;
-LATBbits.LATB1 = ~LATBbits.LATB1;
-LATD = display7s(tmp);
-tmp++;
-if(tmp == 10 && flag == 1)
-{
-INTCONbits.TMR0IE = 0;
-_delaywdt((unsigned long)((1000)*(8000000/4000.0)));
-LATD = display7s(0);
+
 }
-if (tmp > 15)
+if (INTCONbits.INT0IF == 1)
 {
-tmp = 0;
-}
+INTCONbits.INT0IF = 0;
+if(PORTCbits.RC0 == 0){
+PORTCbits.RC0 = ~PORTCbits.RC0;
+Lcd_Cmd(128);
+Lcd_Out(1, 0, "Motor 1: ON ");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));}
+else{
+PORTCbits.RC0 = ~PORTCbits.RC0;
+Lcd_Out(1, 0, "Motor 1: OFF");
+_delaywdt((unsigned long)((200)*(8000000/4000.0)));
 }
 
 }

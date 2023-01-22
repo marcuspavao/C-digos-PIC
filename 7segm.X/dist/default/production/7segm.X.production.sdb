@@ -27,6 +27,8 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
+"11 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\display7s.c
+[v _display7s display7s `(uc  1 e 1 0 ]
 "14 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\main7seg.c
 [v _main main `(v  1 e 1 0 ]
 "62
@@ -62,6 +64,27 @@
 [v _LATAbits LATAbits `VES180  1 e 1 @3977 ]
 "1090
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S203 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1117
+[s S212 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S221 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
+[v _LATBbits LATBbits `VES221  1 e 1 @3978 ]
 "1314
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "1478
@@ -140,7 +163,12 @@
 ]
 [u S133 . 1 `S111 1 . 1 0 `S120 1 . 1 0 `S129 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES133  1 e 1 @4082 ]
-"14 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\main7seg.c
+"10 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\main7seg.c
+[v _count count `i  1 e 2 0 ]
+[v _flag flag `i  1 e 2 0 ]
+"11
+[v _tmp tmp `uc  1 e 1 0 ]
+"14
 [v _main main `(v  1 e 1 0 ]
 {
 "60
@@ -149,4 +177,12 @@
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "105
+} 0
+"11 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\display7s.c
+[v _display7s display7s `(uc  1 e 1 0 ]
+{
+[v display7s@v v `uc  1 a 1 wreg ]
+[v display7s@v v `uc  1 a 1 wreg ]
+[v display7s@v v `uc  1 a 1 0 ]
+"50
 } 0

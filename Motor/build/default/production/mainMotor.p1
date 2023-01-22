@@ -1,23 +1,89 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"2155 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"2165
+[s S74 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S74 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2154
+[u S72 `S73 1 `S74 1 ]
+[n S72 . . . ]
+"2176
+[v _TRISDbits `VS72 ~T0 @X0 0 e@3989 ]
+"2377
+[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S79 . TRISE0 TRISE1 TRISE2 . PSPMODE IBOV OBF IBF ]
+"2387
+[s S80 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S80 . RE0 RE1 RE2 RE3 ]
+"2376
+[u S78 `S79 1 `S80 1 ]
+[n S78 . . . ]
+"2394
+[v _TRISEbits `VS78 ~T0 @X0 0 e@3990 ]
+"639
+[s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S24 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"649
+[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S25 . PSP0 PSP1 PSP2 PSP3 PSP4 PSP5 PSP6 PSP7 ]
+"659
+[s S26 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . . P1B P1C P1D ]
+"665
+[s S27 :7 `uc 1 :1 `uc 1 ]
+[n S27 . . SS2 ]
+"638
+[u S23 `S24 1 `S25 1 `S26 1 `S27 1 ]
+[n S23 . . . . . ]
+"670
+[v _PORTDbits `VS23 ~T0 @X0 0 e@3971 ]
+"781
+[s S29 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S29 . RE0 RE1 RE2 RE3 ]
+"787
+[s S30 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . RD WR CS MCLR ]
+"793
+[s S31 :1 `uc 1 ]
+[n S31 . NOT_RD ]
+"796
+[s S32 :1 `uc 1 :1 `uc 1 ]
+[n S32 . . NOT_WR ]
+"800
+[s S33 :2 `uc 1 :1 `uc 1 ]
+[n S33 . . NOT_CS ]
+"804
+[s S34 :3 `uc 1 :1 `uc 1 ]
+[n S34 . . NOT_MCLR ]
+"808
+[s S35 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S35 . nRD nWR nCS nMCLR ]
+"814
+[s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S36 . AN5 AN6 AN7 VPP ]
+"820
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . PD2 PC2 CCP10 CCP9E ]
+"826
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . RDE WRE PB2 PC3E ]
+"780
+[u S28 `S29 1 `S30 1 `S31 1 `S32 1 `S33 1 `S34 1 `S35 1 `S36 1 `S37 1 `S38 1 ]
+[n S28 . . . . . . . . . . . ]
+"833
+[v _PORTEbits `VS28 ~T0 @X0 0 e@3972 ]
+[v F38 `(v ~T0 @X0 1 tf1`ul ]
+"12 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include\builtins.h
+[v __delay `JF38 ~T0 @X0 0 e ]
+[p i __delay ]
+"75 flexlcd.h
+[v _Lcd_Cmd `(v ~T0 @X0 0 ef1`uc ]
+"74
+[v _Lcd_Chr_CP `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
-"1478 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
-[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
-"1700
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"2144
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"53
-[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
-"978
-[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"272
-[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
-"1090
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"633
-[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
-"1314
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"4776 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
 "4691
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "6629
@@ -34,17 +100,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S265 . . . . ]
 "6648
 [v _INTCON2bits `VS265 ~T0 @X0 0 e@4081 ]
-"6537
-[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S263 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
-"6547
-[s S264 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S264 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
-"6536
-[u S262 `S263 1 `S264 1 ]
-[n S262 . . . ]
-"6558
-[v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
+"1700
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"1922
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"2144
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"2366
+[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
 "6699
 [s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S270 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -59,38 +122,77 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S269 . . . . ]
 "6725
 [v _INTCONbits `VS269 ~T0 @X0 0 e@4082 ]
-"6169
-[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
-"6252
-[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
-"984
-[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S40 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"994
-[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S41 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
-"983
-[u S39 `S40 1 `S41 1 ]
-[n S39 . . . ]
-"1005
-[v _LATAbits `VS39 ~T0 @X0 0 e@3977 ]
-"26 display7s.h
-[v _display7s `(uc ~T0 @X0 0 ef1`uc ]
-"1096 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"1106
-[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S44 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"1095
-[u S42 `S43 1 `S44 1 ]
-[n S42 . . . ]
-"1117
-[v _LATBbits `VS42 ~T0 @X0 0 e@3978 ]
+"6537
+[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S263 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"6547
+[s S264 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S264 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"6536
+[u S262 `S263 1 `S264 1 ]
+[n S262 . . . ]
+"6558
+[v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
+"272
+[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"1090
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"451
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"1202
+[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"633
+[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
+"1314
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"775
+[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
+"1426
+[v _LATE `Vuc ~T0 @X0 0 e@3981 ]
+"278
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"288
+[s S13 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S13 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"298
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . AN12 AN10 AN8 AN9 AN11 PGM PGC PGD ]
+"308
+[s S15 :1 `uc 1 ]
+[n S15 . FLT0 ]
+"311
+[s S16 :3 `uc 1 :1 `uc 1 ]
+[n S16 . . CCP2_PA2 ]
+"277
+[u S11 `S12 1 `S13 1 `S14 1 `S15 1 `S16 1 ]
+[n S11 . . . . . . ]
+"316
+[v _PORTBbits `VS11 ~T0 @X0 0 e@3969 ]
 [v F41 `(v ~T0 @X0 1 tf1`ul ]
 "14 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include\builtins.h
 [v __delaywdt `JF41 ~T0 @X0 0 e ]
 [p i __delaywdt ]
+"457 ../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"467
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . T1OSO T1OSI CCP1 SCK SDI SDO TX RX ]
+"477
+[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S20 . T13CKI CCP2 . SCL SDA . CK DT ]
+"487
+[s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S21 . T1CKI . P1A ]
+"492
+[s S22 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S22 . . PA2 PA1 ]
+"456
+[u S17 `S18 1 `S19 1 `S20 1 `S21 1 `S22 1 ]
+[n S17 . . . . . . ]
+"498
+[v _PORTCbits `VS17 ~T0 @X0 0 e@3970 ]
 "7 configbits.h
 [p x OSC=HS ]
 "8
@@ -2965,263 +3067,699 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;display7s.h: 26: unsigned char display7s(unsigned char v);
-"10 main7seg.c
-[v _count `i ~T0 @X0 1 e ]
-[i _count
--> 0 `i
-]
-[v _flag `i ~T0 @X0 1 e ]
-[i _flag
--> 0 `i
-]
-[; ;main7seg.c: 10: int count = 0, flag = 0;
-"11
-[v _tmp `uc ~T0 @X0 1 e ]
-[; ;main7seg.c: 11: unsigned char tmp;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"14
-[v _main `(v ~T0 @X0 1 ef ]
-"15
+[; ;flexlcd.h: 71: void Lcd_Init(void);
+[; ;flexlcd.h: 72: void Lcd_Out(unsigned char y, unsigned char x, const char *buffer);
+[; ;flexlcd.h: 73: void Lcd_Out2(unsigned char y, unsigned char x, char *buffer);
+[; ;flexlcd.h: 74: void Lcd_Chr_CP(char data);
+[; ;flexlcd.h: 75: void Lcd_Cmd(unsigned char data);
+"77 flexlcd.h
+[v _Lcd_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;main7seg.c: 14: void main(void)
-[; ;main7seg.c: 15: {
-[e :U _main ]
+[; ;flexlcd.h: 77: void Lcd_Init(void){
+[e :U _Lcd_Init ]
 [f ]
-[; ;main7seg.c: 17: TRISA = 0b00000000;
-"17
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main7seg.c: 18: TRISB = 0b00001111;
-"18
-[e = _TRISB -> -> 15 `i `uc ]
-[; ;main7seg.c: 19: TRISD = 0b00000000;
-"19
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main7seg.c: 20: PORTA = 0;
-"20
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main7seg.c: 21: LATA = 0;
-"21
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main7seg.c: 22: PORTB = 0;
-"22
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main7seg.c: 23: LATB = 0;
-"23
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main7seg.c: 24: PORTD = 0;
-"24
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;main7seg.c: 25: LATD = 0;
-"25
-[e = _LATD -> -> 0 `i `uc ]
-[; ;main7seg.c: 27: ADCON1 = 0b00001111;
-"27
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main7seg.c: 29: INTCON2bits.RBPU = 0;
-"29
-[e = . . _INTCON2bits 2 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 31: INTCON2bits.INTEDG0 = 0;
-"31
-[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
-[; ;main7seg.c: 33: INTCON3bits.INT1IF = 0;
-"33
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;main7seg.c: 34: INTCON3bits.INT1IE = 1;
-"34
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-[; ;main7seg.c: 36: INTCON3bits.INT2IF = 0;
-"36
-[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 37: INTCON3bits.INT2IE = 1;
-"37
-[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
-[; ;main7seg.c: 39: INTCONbits.INT0IF = 0;
-"39
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 40: INTCONbits.INT0IE = 1;
-"40
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;main7seg.c: 42: INTCONbits.TMR0IF = 0;
-"42
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main7seg.c: 43: INTCONbits.TMR0IE = 1;
-"43
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;main7seg.c: 46: T0CON = 0b11000101;
-"46
-[e = _T0CON -> -> 197 `i `uc ]
-[; ;main7seg.c: 47: TMR0 = 131;
-"47
-[e = _TMR0 -> -> 131 `i `us ]
-[; ;main7seg.c: 48: (INTCONbits.GIE = 1);
-"48
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main7seg.c: 50: LATAbits.LATA2 = 1;
-"50
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-[; ;main7seg.c: 51: while(1)
-"51
-[e :U 278 ]
-[; ;main7seg.c: 52: {
-"52
+"78
+[v _data `uc ~T0 @X0 1 a ]
+[; ;flexlcd.h: 78: unsigned char data;
+[; ;flexlcd.h: 79: TRISDbits.TRISD7 = 0;
+"79
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 80: TRISDbits.TRISD6 = 0;
+"80
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 81: TRISDbits.TRISD5 = 0;
+"81
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 82: TRISDbits.TRISD4 = 0;
+"82
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 83: TRISEbits.TRISE2 = 0;
+"83
+[e = . . _TRISEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 84: TRISEbits.TRISE1 = 0;
+"84
+[e = . . _TRISEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 85: PORTDbits.RD7 = 0;
+"85
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 86: PORTDbits.RD6 = 0;
+"86
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 87: PORTDbits.RD5 = 0;
+"87
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 88: PORTDbits.RD4 = 0;
+"88
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 89: PORTEbits.RE1 = 0;
+"89
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 90: PORTEbits.RE2 = 0;
+"90
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 91: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"91
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 92: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"92
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 93: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"93
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 94: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"94
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 95: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"95
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 96: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"96
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 97: for(data = 1; data < 4; data ++)
+"97
 {
-[; ;main7seg.c: 57: asm(" clrwdt");
-"57
-[; <"  clrwdt ;# ">
-"58
-}
-[e :U 277 ]
-"51
+[e = _data -> -> 1 `i `uc ]
+[e $ < -> _data `i -> 4 `i 277  ]
 [e $U 278  ]
-[e :U 279 ]
-[; ;main7seg.c: 58: }
-[; ;main7seg.c: 59: return;
-"59
-[e $UE 276  ]
-[; ;main7seg.c: 60: }
-"60
+"98
+[e :U 277 ]
+[; ;flexlcd.h: 98: {
+{
+[; ;flexlcd.h: 99: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1; PORTEbits.RE1 = 0;
+"99
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 100: PORTEbits.RE2 = 0; PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1;
+"100
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+[; ;flexlcd.h: 101: PORTEbits.RE1 = 1; PORTEbits.RE2 = 0;
+"101
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 102: _delay((unsigned long)((5)*(8000000/4000000.0)));
+"102
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 103: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 1; PORTEbits.RE1 = 0;
+"103
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 104: PORTEbits.RE2 = 0;
+"104
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 105: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"105
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"106
+}
+"97
+[e ++ _data -> -> 1 `i `uc ]
+[e $ < -> _data `i -> 4 `i 277  ]
+[e :U 278 ]
+"106
+}
+[; ;flexlcd.h: 106: }
+[; ;flexlcd.h: 107: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+"107
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 108: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 1; PORTEbits.RE2 = 0;
+"108
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 109: _delay((unsigned long)((5)*(8000000/4000000.0)));
+"109
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 110: PORTDbits.RD7 = 0; PORTDbits.RD6 = 0; PORTDbits.RD5 = 1; PORTDbits.RD4 = 0; PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+"110
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 111: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"111
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 112: data = 40; Lcd_Cmd(data);
+"112
+[e = _data -> -> 40 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 113: data = 16; Lcd_Cmd(data);
+"113
+[e = _data -> -> 16 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 114: data = 1; Lcd_Cmd(data);
+"114
+[e = _data -> -> 1 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 115: data = 15; Lcd_Cmd(data);
+"115
+[e = _data -> -> 15 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 116: }
+"116
 [e :UE 276 ]
 }
-[v $root$_isr `(v ~T0 @X0 0 e ]
-[v F2424 `(v ~T0 @X0 1 tf ]
-"62
-[v _isr `IF2424 ~T0 @X0 1 e ]
+"119
+[v _Lcd_Out `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
+"120
 {
-[; ;main7seg.c: 62: void interrupt isr(void){
-[e :U _isr ]
+[; ;flexlcd.h: 119: void Lcd_Out(unsigned char y, unsigned char x, const char *buffer)
+[; ;flexlcd.h: 120: {
+[e :U _Lcd_Out ]
+"119
+[v _y `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _buffer `*Cuc ~T0 @X0 1 r3 ]
+"120
 [f ]
-[; ;main7seg.c: 63: if (INTCONbits.INT0F == 1)
-"63
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 281  ]
-[; ;main7seg.c: 64: {
-"64
+"121
+[v _data `uc ~T0 @X0 1 a ]
+[; ;flexlcd.h: 121: unsigned char data;
+[; ;flexlcd.h: 122: switch (y)
+"122
+[e $U 282  ]
+[; ;flexlcd.h: 123: {
+"123
 {
-[; ;main7seg.c: 65: INTCONbits.INT0F = 0;
-"65
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 66: tmp = 0;
-"66
-[e = _tmp -> -> 0 `i `uc ]
-[; ;main7seg.c: 67: flag = 1;
-"67
-[e = _flag -> 1 `i ]
-"68
-}
-[e :U 281 ]
-[; ;main7seg.c: 68: }
-[; ;main7seg.c: 69: if(INTCON3bits.INT2IF == 1)
-"69
-[e $ ! == -> . . _INTCON3bits 0 1 `i -> 1 `i 282  ]
-[; ;main7seg.c: 70: {
-"70
-{
-[; ;main7seg.c: 71: INTCON3bits.INT2IF = 0;
-"71
-[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 72: LATD = display7s(tmp);
-"72
-[e = _LATD ( _display7s (1 _tmp ]
-[; ;main7seg.c: 73: tmp++;
-"73
-[e ++ _tmp -> -> 1 `i `uc ]
-"74
-}
-[e :U 282 ]
-[; ;main7seg.c: 74: }
-[; ;main7seg.c: 75: if(INTCON3bits.INT1IF == 1)
-"75
-[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 283  ]
-[; ;main7seg.c: 76: {
-"76
-{
-[; ;main7seg.c: 77: INTCON3bits.INT1IF = 0;
-"77
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;main7seg.c: 78: tmp = tmp - 1;
-"78
-[e = _tmp -> - -> _tmp `i -> 1 `i `uc ]
-[; ;main7seg.c: 79: LATD = display7s(tmp);
-"79
-[e = _LATD ( _display7s (1 _tmp ]
-"80
-}
+[; ;flexlcd.h: 124: case 1: data = 128 + x; break;
+"124
 [e :U 283 ]
-[; ;main7seg.c: 80: }
-[; ;main7seg.c: 81: if (INTCONbits.TMR0IF == 1)
-"81
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 284  ]
-[; ;main7seg.c: 82: {
-"82
-{
-[; ;main7seg.c: 83: INTCONbits.TMR0IF = 0;
-"83
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main7seg.c: 84: TMR0 = 131;
-"84
-[e = _TMR0 -> -> 131 `i `us ]
-[; ;main7seg.c: 85: count ++;
-"85
-[e ++ _count -> 1 `i ]
-[; ;main7seg.c: 86: if (count == 250)
-"86
-[e $ ! == _count -> 250 `i 285  ]
-[; ;main7seg.c: 87: {
-"87
-{
-[; ;main7seg.c: 88: count = 0;
-"88
-[e = _count -> 0 `i ]
-[; ;main7seg.c: 89: LATBbits.LATB1 = ~LATBbits.LATB1;
-"89
-[e = . . _LATBbits 0 1 -> ~ -> . . _LATBbits 0 1 `i `uc ]
-[; ;main7seg.c: 90: LATD = display7s(tmp);
-"90
-[e = _LATD ( _display7s (1 _tmp ]
-[; ;main7seg.c: 91: tmp++;
-"91
-[e ++ _tmp -> -> 1 `i `uc ]
-[; ;main7seg.c: 92: if(tmp == 10 && flag == 1)
-"92
-[e $ ! && == -> _tmp `i -> 10 `i == _flag -> 1 `i 286  ]
-[; ;main7seg.c: 93: {
-"93
-{
-[; ;main7seg.c: 94: INTCONbits.TMR0IE = 0;
-"94
-[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
-[; ;main7seg.c: 95: _delaywdt((unsigned long)((1000)*(8000000/4000.0)));
-"95
-[e ( __delaywdt (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main7seg.c: 96: LATD = display7s(0);
-"96
-[e = _LATD ( _display7s (1 -> -> 0 `i `uc ]
-"97
-}
-[e :U 286 ]
-[; ;main7seg.c: 97: }
-[; ;main7seg.c: 98: if (tmp > 15)
-"98
-[e $ ! > -> _tmp `i -> 15 `i 287  ]
-[; ;main7seg.c: 99: {
-"99
-{
-[; ;main7seg.c: 100: tmp = 0;
-"100
-[e = _tmp -> -> 0 `i `uc ]
-"101
-}
-[e :U 287 ]
-"102
-}
-[e :U 285 ]
-"104
-}
+[e = _data -> + -> 128 `i -> _x `i `uc ]
+[e $U 281  ]
+[; ;flexlcd.h: 125: case 2: data = 192 + x; break;
+"125
 [e :U 284 ]
-[; ;main7seg.c: 101: }
-[; ;main7seg.c: 102: }
-[; ;main7seg.c: 104: }
-[; ;main7seg.c: 105: }
-"105
+[e = _data -> + -> 192 `i -> _x `i `uc ]
+[e $U 281  ]
+[; ;flexlcd.h: 126: case 3: data = 148 + x; break;
+"126
+[e :U 285 ]
+[e = _data -> + -> 148 `i -> _x `i `uc ]
+[e $U 281  ]
+[; ;flexlcd.h: 127: case 4: data = 212 + x; break;
+"127
+[e :U 286 ]
+[e = _data -> + -> 212 `i -> _x `i `uc ]
+[e $U 281  ]
+[; ;flexlcd.h: 128: default: break;
+"128
+[e :U 287 ]
+[e $U 281  ]
+"129
+}
+[; ;flexlcd.h: 129: }
+[e $U 281  ]
+"122
+[e :U 282 ]
+[e [\ _y , $ -> -> 1 `i `uc 283
+ , $ -> -> 2 `i `uc 284
+ , $ -> -> 3 `i `uc 285
+ , $ -> -> 4 `i `uc 286
+ 287 ]
+"129
+[e :U 281 ]
+[; ;flexlcd.h: 130: Lcd_Cmd(data);
+"130
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 131: while(*buffer)
+"131
+[e $U 288  ]
+[e :U 289 ]
+[; ;flexlcd.h: 132: {
+"132
+{
+[; ;flexlcd.h: 133: Lcd_Chr_CP(*buffer);
+"133
+[e ( _Lcd_Chr_CP (1 *U _buffer ]
+[; ;flexlcd.h: 134: buffer++;
+"134
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"135
+}
+[e :U 288 ]
+"131
+[e $ != -> *U _buffer `i -> -> -> 0 `i `Cuc `i 289  ]
+[e :U 290 ]
+[; ;flexlcd.h: 135: }
+[; ;flexlcd.h: 136: return;
+"136
+[e $UE 280  ]
+[; ;flexlcd.h: 137: }
+"137
 [e :UE 280 ]
 }
+"140
+[v _Lcd_Out2 `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
+"141
+{
+[; ;flexlcd.h: 140: void Lcd_Out2(unsigned char y, unsigned char x, char *buffer)
+[; ;flexlcd.h: 141: {
+[e :U _Lcd_Out2 ]
+"140
+[v _y `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _buffer `*uc ~T0 @X0 1 r3 ]
+"141
+[f ]
+"142
+[v _data `uc ~T0 @X0 1 a ]
+[; ;flexlcd.h: 142: unsigned char data;
+[; ;flexlcd.h: 143: switch (y)
+"143
+[e $U 293  ]
+[; ;flexlcd.h: 144: {
+"144
+{
+[; ;flexlcd.h: 145: case 1: data = 128 + x; break;
+"145
+[e :U 294 ]
+[e = _data -> + -> 128 `i -> _x `i `uc ]
+[e $U 292  ]
+[; ;flexlcd.h: 146: case 2: data = 192 + x; break;
+"146
+[e :U 295 ]
+[e = _data -> + -> 192 `i -> _x `i `uc ]
+[e $U 292  ]
+[; ;flexlcd.h: 147: case 3: data = 148 + x; break;
+"147
+[e :U 296 ]
+[e = _data -> + -> 148 `i -> _x `i `uc ]
+[e $U 292  ]
+[; ;flexlcd.h: 148: case 4: data = 212 + x; break;
+"148
+[e :U 297 ]
+[e = _data -> + -> 212 `i -> _x `i `uc ]
+[e $U 292  ]
+[; ;flexlcd.h: 149: default: break;
+"149
+[e :U 298 ]
+[e $U 292  ]
+"150
+}
+[; ;flexlcd.h: 150: }
+[e $U 292  ]
+"143
+[e :U 293 ]
+[e [\ _y , $ -> -> 1 `i `uc 294
+ , $ -> -> 2 `i `uc 295
+ , $ -> -> 3 `i `uc 296
+ , $ -> -> 4 `i `uc 297
+ 298 ]
+"150
+[e :U 292 ]
+[; ;flexlcd.h: 151: Lcd_Cmd(data);
+"151
+[e ( _Lcd_Cmd (1 _data ]
+[; ;flexlcd.h: 152: while(*buffer)
+"152
+[e $U 299  ]
+[e :U 300 ]
+[; ;flexlcd.h: 153: {
+"153
+{
+[; ;flexlcd.h: 154: Lcd_Chr_CP(*buffer);
+"154
+[e ( _Lcd_Chr_CP (1 *U _buffer ]
+[; ;flexlcd.h: 155: buffer++;
+"155
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"156
+}
+[e :U 299 ]
+"152
+[e $ != -> *U _buffer `i -> -> -> 0 `i `uc `i 300  ]
+[e :U 301 ]
+[; ;flexlcd.h: 156: }
+[; ;flexlcd.h: 157: return;
+"157
+[e $UE 291  ]
+[; ;flexlcd.h: 158: }
+"158
+[e :UE 291 ]
+}
+"161
+[v _Lcd_Chr_CP `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;flexlcd.h: 161: void Lcd_Chr_CP(char data){
+[e :U _Lcd_Chr_CP ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;flexlcd.h: 162: PORTEbits.RE1 = 0; PORTEbits.RE2 = 1;
+"162
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+[; ;flexlcd.h: 163: PORTDbits.RD7 = (data & 0b10000000)>>7; PORTDbits.RD6 = (data & 0b01000000)>>6;
+"163
+[e = . . _PORTDbits 0 7 -> >> & -> _data `i -> 128 `i -> 7 `i `uc ]
+[e = . . _PORTDbits 0 6 -> >> & -> _data `i -> 64 `i -> 6 `i `uc ]
+[; ;flexlcd.h: 164: PORTDbits.RD5 = (data & 0b00100000)>>5; PORTDbits.RD4 = (data & 0b00010000)>>4;
+"164
+[e = . . _PORTDbits 0 5 -> >> & -> _data `i -> 32 `i -> 5 `i `uc ]
+[e = . . _PORTDbits 0 4 -> >> & -> _data `i -> 16 `i -> 4 `i `uc ]
+[; ;flexlcd.h: 165: _delay(10);
+"165
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+[; ;flexlcd.h: 166: PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+"166
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 167: PORTDbits.RD7 = (data & 0b00001000)>>3; PORTDbits.RD6 = (data & 0b00000100)>>2;
+"167
+[e = . . _PORTDbits 0 7 -> >> & -> _data `i -> 8 `i -> 3 `i `uc ]
+[e = . . _PORTDbits 0 6 -> >> & -> _data `i -> 4 `i -> 2 `i `uc ]
+[; ;flexlcd.h: 168: PORTDbits.RD5 = (data & 0b00000010)>>1; PORTDbits.RD4 = (data & 0b00000001);
+"168
+[e = . . _PORTDbits 0 5 -> >> & -> _data `i -> 2 `i -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> & -> _data `i -> 1 `i `uc ]
+[; ;flexlcd.h: 169: _delay(10);
+"169
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+[; ;flexlcd.h: 170: PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+"170
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 171: _delay((unsigned long)((5)*(8000000/4000000.0))); _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"171
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 172: }
+"172
+[e :UE 302 ]
+}
+"175
+[v _Lcd_Cmd `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;flexlcd.h: 175: void Lcd_Cmd(unsigned char data){
+[e :U _Lcd_Cmd ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;flexlcd.h: 176: PORTEbits.RE1 = 0; PORTEbits.RE2 = 0;
+"176
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 177: PORTDbits.RD7 = (data & 0b10000000)>>7; PORTDbits.RD6 = (data & 0b01000000)>>6;
+"177
+[e = . . _PORTDbits 0 7 -> >> & -> _data `i -> 128 `i -> 7 `i `uc ]
+[e = . . _PORTDbits 0 6 -> >> & -> _data `i -> 64 `i -> 6 `i `uc ]
+[; ;flexlcd.h: 178: PORTDbits.RD5 = (data & 0b00100000)>>5; PORTDbits.RD4 = (data & 0b00010000)>>4;
+"178
+[e = . . _PORTDbits 0 5 -> >> & -> _data `i -> 32 `i -> 5 `i `uc ]
+[e = . . _PORTDbits 0 4 -> >> & -> _data `i -> 16 `i -> 4 `i `uc ]
+[; ;flexlcd.h: 179: _delay(10);
+"179
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+[; ;flexlcd.h: 180: PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+"180
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 181: PORTDbits.RD7 = (data & 0b00001000)>>3; PORTDbits.RD6 = (data & 0b00000100)>>2;
+"181
+[e = . . _PORTDbits 0 7 -> >> & -> _data `i -> 8 `i -> 3 `i `uc ]
+[e = . . _PORTDbits 0 6 -> >> & -> _data `i -> 4 `i -> 2 `i `uc ]
+[; ;flexlcd.h: 182: PORTDbits.RD5 = (data & 0b00000010)>>1; PORTDbits.RD4 = (data & 0b00000001);
+"182
+[e = . . _PORTDbits 0 5 -> >> & -> _data `i -> 2 `i -> 1 `i `uc ]
+[e = . . _PORTDbits 0 4 -> & -> _data `i -> 1 `i `uc ]
+[; ;flexlcd.h: 183: _delay(10);
+"183
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+[; ;flexlcd.h: 184: PORTEbits.RE1 = 1; _delay((unsigned long)((5)*(8000000/4000000.0))); PORTEbits.RE1 = 0;
+"184
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+[; ;flexlcd.h: 185: _delay((unsigned long)((5500)*(8000000/4000000.0)));
+"185
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;flexlcd.h: 186: }
+"186
+[e :UE 303 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"17 mainMotor.c
+[v _main `(v ~T0 @X0 1 ef ]
+"18
+{
+[; ;mainMotor.c: 17: void main(void)
+[; ;mainMotor.c: 18: {
+[e :U _main ]
+[f ]
+[; ;mainMotor.c: 19: ADCON0 = 0b00000000;
+"19
+[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 20: ADCON1 = 0b00001111;
+"20
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;mainMotor.c: 24: INTCON2bits.RBPU = 1;
+"24
+[e = . . _INTCON2bits 2 1 -> -> 1 `i `uc ]
+[; ;mainMotor.c: 26: TRISB = 0b11111111;
+"26
+[e = _TRISB -> -> 255 `i `uc ]
+[; ;mainMotor.c: 27: TRISC = 0b00000000;
+"27
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;mainMotor.c: 28: TRISD = 0b00000000;
+"28
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;mainMotor.c: 29: TRISE = 0b00000000;
+"29
+[e = _TRISE -> -> 0 `i `uc ]
+[; ;mainMotor.c: 31: INTCON2bits.INTEDG0 = 0;
+"31
+[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 33: INTCONbits.INT0IF = 0;
+"33
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 34: INTCONbits.INT0IE = 1;
+"34
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+[; ;mainMotor.c: 36: INTCON3bits.INT1IF = 0;
+"36
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 37: INTCON3bits.INT1IE = 1;
+"37
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+[; ;mainMotor.c: 39: PORTB = 0;
+"39
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;mainMotor.c: 40: LATB = 0;
+"40
+[e = _LATB -> -> 0 `i `uc ]
+[; ;mainMotor.c: 41: PORTC = 0;
+"41
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;mainMotor.c: 42: LATC = 0;
+"42
+[e = _LATC -> -> 0 `i `uc ]
+[; ;mainMotor.c: 43: PORTD = 0;
+"43
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;mainMotor.c: 44: LATD = 0;
+"44
+[e = _LATD -> -> 0 `i `uc ]
+[; ;mainMotor.c: 45: PORTE = 0;
+"45
+[e = _PORTE -> -> 0 `i `uc ]
+[; ;mainMotor.c: 46: LATE = 0;
+"46
+[e = _LATE -> -> 0 `i `uc ]
+"48
+[v _col `i ~T0 @X0 1 a ]
+[v _l `i ~T0 @X0 1 a ]
+[; ;mainMotor.c: 48: int col, l;
+[; ;mainMotor.c: 49: col = 0;
+"49
+[e = _col -> 0 `i ]
+[; ;mainMotor.c: 50: l = 1;
+"50
+[e = _l -> 1 `i ]
+[; ;mainMotor.c: 51: Lcd_Init();
+"51
+[e ( _Lcd_Init ..  ]
+[; ;mainMotor.c: 52: Lcd_Cmd(12);
+"52
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;mainMotor.c: 53: Lcd_Out(1, 0, "Motor 1: OFF");
+"53
+[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 0 `i `uc :s 1C ]
+[; ;mainMotor.c: 54: Lcd_Out(2, 0, "Motor 2: OFF");
+"54
+[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 0 `i `uc :s 2C ]
+[; ;mainMotor.c: 55: (INTCONbits.GIE = 1);
+"55
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;mainMotor.c: 56: while(1)
+"56
+[e :U 306 ]
+[; ;mainMotor.c: 57: {
+"57
+{
+[; ;mainMotor.c: 59: if(PORTBbits.RB3 == 0){
+"59
+[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 308  ]
+{
+[; ;mainMotor.c: 60: Lcd_Cmd(1);
+"60
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+[; ;mainMotor.c: 61: Lcd_Out(l, 0, "Marcus");
+"61
+[e ( _Lcd_Out (3 , , -> _l `uc -> -> 0 `i `uc :s 3C ]
+[; ;mainMotor.c: 62: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
+"62
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"63
+}
+[e :U 308 ]
+[; ;mainMotor.c: 63: }
+[; ;mainMotor.c: 65: asm(" clrwdt");
+"65
+[; <"  clrwdt ;# ">
+"66
+}
+[e :U 305 ]
+"56
+[e $U 306  ]
+[e :U 307 ]
+[; ;mainMotor.c: 66: }
+[; ;mainMotor.c: 67: return;
+"67
+[e $UE 304  ]
+[; ;mainMotor.c: 69: }
+"69
+[e :UE 304 ]
+}
+[v $root$_isr `(v ~T0 @X0 0 e ]
+[v F2465 `(v ~T0 @X0 1 tf ]
+"71
+[v _isr `IF2465 ~T0 @X0 1 e ]
+{
+[; ;mainMotor.c: 71: void interrupt isr(void){
+[e :U _isr ]
+[f ]
+[; ;mainMotor.c: 72: if(INTCON3bits.INT1IF == 1)
+"72
+[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 310  ]
+[; ;mainMotor.c: 73: {
+"73
+{
+[; ;mainMotor.c: 74: INTCON3bits.INT1IF = 0;
+"74
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 75: if(PORTEbits.RE0 == 0){
+"75
+[e $ ! == -> . . _PORTEbits 0 0 `i -> 0 `i 311  ]
+{
+[; ;mainMotor.c: 76: PORTEbits.RE0 = ~PORTEbits.RE0;
+"76
+[e = . . _PORTEbits 0 0 -> ~ -> . . _PORTEbits 0 0 `i `uc ]
+[; ;mainMotor.c: 77: Lcd_Out(2, 0, "Motor 2: ON ");
+"77
+[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 0 `i `uc :s 4C ]
+[; ;mainMotor.c: 78: _delaywdt((unsigned long)((200)*(8000000/4000.0)));}
+"78
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+}
+[e $U 312  ]
+"79
+[e :U 311 ]
+[; ;mainMotor.c: 79: else{
+{
+[; ;mainMotor.c: 80: PORTEbits.RE0 = ~PORTEbits.RE0;
+"80
+[e = . . _PORTEbits 0 0 -> ~ -> . . _PORTEbits 0 0 `i `uc ]
+[; ;mainMotor.c: 81: Lcd_Out(2, 0, "Motor 2: OFF");
+"81
+[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 0 `i `uc :s 5C ]
+[; ;mainMotor.c: 82: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
+"82
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"83
+}
+[e :U 312 ]
+"85
+}
+[e :U 310 ]
+[; ;mainMotor.c: 83: }
+[; ;mainMotor.c: 85: }
+[; ;mainMotor.c: 86: if (INTCONbits.INT0IF == 1)
+"86
+[e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 313  ]
+[; ;mainMotor.c: 87: {
+"87
+{
+[; ;mainMotor.c: 88: INTCONbits.INT0IF = 0;
+"88
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;mainMotor.c: 89: if(PORTCbits.RC0 == 0){
+"89
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 0 `i 314  ]
+{
+[; ;mainMotor.c: 90: PORTCbits.RC0 = ~PORTCbits.RC0;
+"90
+[e = . . _PORTCbits 0 0 -> ~ -> . . _PORTCbits 0 0 `i `uc ]
+[; ;mainMotor.c: 91: Lcd_Cmd(128);
+"91
+[e ( _Lcd_Cmd (1 -> -> 128 `i `uc ]
+[; ;mainMotor.c: 92: Lcd_Out(1, 0, "Motor 1: ON ");
+"92
+[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 0 `i `uc :s 6C ]
+[; ;mainMotor.c: 93: _delaywdt((unsigned long)((200)*(8000000/4000.0)));}
+"93
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+}
+[e $U 315  ]
+"94
+[e :U 314 ]
+[; ;mainMotor.c: 94: else{
+{
+[; ;mainMotor.c: 95: PORTCbits.RC0 = ~PORTCbits.RC0;
+"95
+[e = . . _PORTCbits 0 0 -> ~ -> . . _PORTCbits 0 0 `i `uc ]
+[; ;mainMotor.c: 96: Lcd_Out(1, 0, "Motor 1: OFF");
+"96
+[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 0 `i `uc :s 7C ]
+[; ;mainMotor.c: 97: _delaywdt((unsigned long)((200)*(8000000/4000.0)));
+"97
+[e ( __delaywdt (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"98
+}
+[e :U 315 ]
+"100
+}
+[e :U 313 ]
+[; ;mainMotor.c: 98: }
+[; ;mainMotor.c: 100: }
+[; ;mainMotor.c: 101: }
+"101
+[e :UE 309 ]
+}
+[a 3C 77 97 114 99 117 115 0 ]
+[a 2C 77 111 116 111 114 32 50 58 32 79 70 70 0 ]
+[a 5C 77 111 116 111 114 32 50 58 32 79 70 70 0 ]
+[a 1C 77 111 116 111 114 32 49 58 32 79 70 70 0 ]
+[a 7C 77 111 116 111 114 32 49 58 32 79 70 70 0 ]
+[a 4C 77 111 116 111 114 32 50 58 32 79 78 32 0 ]
+[a 6C 77 111 116 111 114 32 49 58 32 79 78 32 0 ]
