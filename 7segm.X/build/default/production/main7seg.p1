@@ -74,23 +74,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S39 . . . ]
 "1004
 [v _LATAbits `VS39 ~T0 @X0 0 e@3977 ]
-"26 display7s.h
-[v _display7s `(uc ~T0 @X0 0 ef1`uc ]
-"1095 C:/Users/pavao/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"1105
-[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S44 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"1094
-[u S42 `S43 1 `S44 1 ]
-[n S42 . . . ]
-"1116
-[v _LATBbits `VS42 ~T0 @X0 0 e@3978 ]
-[v F2383 `(v ~T0 @X0 1 tf1`ul ]
-"205 C:/Users/pavao/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\pic18.h
-[v __delaywdt `JF2383 ~T0 @X0 0 e ]
-[p i __delaywdt ]
 "7 configbits.h
 [p x OSC=HS ]
 "8
@@ -3063,124 +3046,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main7seg.c: 66: void interrupt isr(void){
 [e :U _isr ]
 [f ]
-[; ;main7seg.c: 67: if (INTCONbits.INT0F == 1)
-"67
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 281  ]
-[; ;main7seg.c: 68: {
-"68
-{
-[; ;main7seg.c: 69: INTCONbits.INT0F = 0;
-"69
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 70: tmp = 0;
-"70
-[e = _tmp -> -> 0 `i `uc ]
-[; ;main7seg.c: 71: flag = 1;
-"71
-[e = _flag -> 1 `i ]
-"72
-}
-[e :U 281 ]
-[; ;main7seg.c: 72: }
-[; ;main7seg.c: 73: if(INTCON3bits.INT2IF == 1)
-"73
-[e $ ! == -> . . _INTCON3bits 0 1 `i -> 1 `i 282  ]
-[; ;main7seg.c: 74: {
-"74
-{
-[; ;main7seg.c: 75: INTCON3bits.INT2IF = 0;
-"75
-[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;main7seg.c: 76: LATD = display7s(tmp);
-"76
-[e = _LATD ( _display7s (1 _tmp ]
-[; ;main7seg.c: 77: tmp++;
-"77
-[e ++ _tmp -> -> 1 `i `uc ]
-"78
-}
-[e :U 282 ]
-[; ;main7seg.c: 78: }
-[; ;main7seg.c: 79: if(INTCON3bits.INT1IF == 1)
-"79
-[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 283  ]
-[; ;main7seg.c: 80: {
-"80
-{
-[; ;main7seg.c: 81: INTCON3bits.INT1IF = 0;
-"81
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;main7seg.c: 82: tmp = tmp - 1;
-"82
-[e = _tmp -> - -> _tmp `i -> 1 `i `uc ]
-[; ;main7seg.c: 83: LATD = display7s(tmp);
-"83
-[e = _LATD ( _display7s (1 _tmp ]
-"84
-}
-[e :U 283 ]
-[; ;main7seg.c: 84: }
-[; ;main7seg.c: 85: if (INTCONbits.TMR0IF == 1)
-"85
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 284  ]
-[; ;main7seg.c: 86: {
-"86
-{
-[; ;main7seg.c: 87: INTCONbits.TMR0IF = 0;
-"87
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main7seg.c: 88: TMR0 = 131;
-"88
-[e = _TMR0 -> -> 131 `i `us ]
-[; ;main7seg.c: 89: count ++;
-"89
-[e ++ _count -> 1 `i ]
-[; ;main7seg.c: 90: if (count == 250)
-"90
-[e $ ! == _count -> 250 `i 285  ]
-[; ;main7seg.c: 91: {
-"91
-{
-[; ;main7seg.c: 92: count = 0;
-"92
-[e = _count -> 0 `i ]
-[; ;main7seg.c: 93: LATBbits.LATB1 = ~LATBbits.LATB1;
-"93
-[e = . . _LATBbits 0 1 -> ~ -> . . _LATBbits 0 1 `i `uc ]
-[; ;main7seg.c: 94: LATD = display7s(tmp);
-"94
-[e = _LATD ( _display7s (1 _tmp ]
-[; ;main7seg.c: 95: tmp++;
-"95
-[e ++ _tmp -> -> 1 `i `uc ]
-[; ;main7seg.c: 96: if(tmp == 10 && flag == 1)
-"96
-[e $ ! && == -> _tmp `i -> 10 `i == _flag -> 1 `i 286  ]
-[; ;main7seg.c: 97: {
-"97
-{
-[; ;main7seg.c: 98: INTCONbits.TMR0IE = 0;
-"98
-[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
-[; ;main7seg.c: 99: _delaywdt((unsigned long)((1000)*(8000000/4000.0)));
-"99
-[e ( __delaywdt (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main7seg.c: 100: LATD = display7s(0);
-"100
-[e = _LATD ( _display7s (1 -> -> 0 `i `uc ]
-"101
-}
-[e :U 286 ]
-[; ;main7seg.c: 101: }
-[; ;main7seg.c: 102: if (tmp > 15)
-"102
-[e $ ! > -> _tmp `i -> 15 `i 287  ]
-[; ;main7seg.c: 103: {
-"103
-{
-[; ;main7seg.c: 104: tmp = 0;
-"104
-[e = _tmp -> -> 0 `i `uc ]
+[; ;main7seg.c: 105: }
 "105
 }
 [e :U 287 ]

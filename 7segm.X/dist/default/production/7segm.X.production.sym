@@ -198,8 +198,13 @@ intcode 8 289 CODE 8 0
 bssCOMRAM 1 9 COMRAM 1 1
 %locals
 dist/default/production\7segm.X.production.o
+<<<<<<< HEAD
 C:/Users/pavao/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 C:\Users\pavao\AppData\Local\Temp\xcAs408.s
+=======
+../../../../../../Program Files/Microchip/xc8/v2.36/pic/include/proc\pic18f4520.h
+C:\Users\pavao\AppData\Local\Temp\xcAs7uo.s
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 470 272 0 CODE 0
 472 272 0 CODE 0
 475 272 0 CODE 0
@@ -216,6 +221,7 @@ C:\Users\pavao\AppData\Local\Temp\xcAs408.s
 510 284 0 CODE 0
 511 286 0 CODE 0
 main7seg.c
+<<<<<<< HEAD
 18 21C 0 CODE 0
 21 21C 0 CODE 0
 22 220 0 CODE 0
@@ -244,10 +250,41 @@ main7seg.c
 55 268 0 CODE 0
 61 268 0 CODE 0
 C:\Users\pavao\AppData\Local\Temp\xcAs408.s
+=======
+14 21C 0 CODE 0
+17 21C 0 CODE 0
+18 220 0 CODE 0
+19 224 0 CODE 0
+20 228 0 CODE 0
+21 22C 0 CODE 0
+22 230 0 CODE 0
+23 234 0 CODE 0
+24 238 0 CODE 0
+25 23C 0 CODE 0
+27 240 0 CODE 0
+29 244 0 CODE 0
+31 246 0 CODE 0
+33 248 0 CODE 0
+34 24A 0 CODE 0
+36 24C 0 CODE 0
+37 24E 0 CODE 0
+39 250 0 CODE 0
+40 252 0 CODE 0
+42 254 0 CODE 0
+43 256 0 CODE 0
+46 258 0 CODE 0
+47 25C 0 CODE 0
+48 264 0 CODE 0
+50 266 0 CODE 0
+51 268 0 CODE 0
+57 268 0 CODE 0
+C:\Users\pavao\AppData\Local\Temp\xcAs7uo.s
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 883 8 0 CODE 0
 main7seg.c
 66 8 0 CODE 0
 main7seg.c
+<<<<<<< HEAD
 66 12 0 CODE 0
 67 14 0 CODE 0
 69 22 0 CODE 0
@@ -277,6 +314,37 @@ main7seg.c
 102 110 0 CODE 0
 104 120 0 CODE 0
 109 124 0 CODE 0
+=======
+62 12 0 CODE 0
+63 14 0 CODE 0
+65 22 0 CODE 0
+66 24 0 CODE 0
+67 28 0 CODE 0
+69 30 0 CODE 0
+71 3E 0 CODE 0
+72 40 0 CODE 0
+73 48 0 CODE 0
+75 4A 0 CODE 0
+77 58 0 CODE 0
+78 5A 0 CODE 0
+79 5E 0 CODE 0
+81 66 0 CODE 0
+83 74 0 CODE 0
+84 76 0 CODE 0
+85 7E 0 CODE 0
+86 82 0 CODE 0
+88 96 0 CODE 0
+89 9E 0 CODE 0
+90 C0 0 CODE 0
+91 C8 0 CODE 0
+92 CA 0 CODE 0
+94 EE 0 CODE 0
+95 F0 0 CODE 0
+96 108 0 CODE 0
+98 110 0 CODE 0
+100 120 0 CODE 0
+105 124 0 CODE 0
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 display7s.c
 11 128 0 CODE 0
 13 12A 0 CODE 0

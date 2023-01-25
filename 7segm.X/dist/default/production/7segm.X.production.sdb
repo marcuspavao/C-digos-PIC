@@ -27,9 +27,9 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
-"11 C:\Users\pavao\OneDrive\Documentos\UFOP\CAM210-main\CAM210-main\7segm.X\display7s.c
+"11 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\display7s.c
 [v _display7s display7s `(uc  1 e 1 0 ]
-"18 C:\Users\pavao\OneDrive\Documentos\UFOP\CAM210-main\CAM210-main\7segm.X\main7seg.c
+"14 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\main7seg.c
 [v _main main `(v  1 e 1 0 ]
 "66
 [v _isr isr `II(v  1 e 1 0 ]
@@ -73,7 +73,11 @@
 `uc 1 LATB6 1 0 :1:6 
 `uc 1 LATB7 1 0 :1:7 
 ]
+<<<<<<< HEAD
 "1116
+=======
+"1117
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 [s S212 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
@@ -85,7 +89,11 @@
 ]
 [u S221 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
 [v _LATBbits LATBbits `VES221  1 e 1 @3978 ]
+<<<<<<< HEAD
 "1313
+=======
+"1314
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "1477
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
@@ -163,12 +171,21 @@
 ]
 [u S133 . 1 `S111 1 . 1 0 `S120 1 . 1 0 `S129 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES133  1 e 1 @4082 ]
+<<<<<<< HEAD
 "14 C:\Users\pavao\OneDrive\Documentos\UFOP\CAM210-main\CAM210-main\7segm.X\main7seg.c
 [v _count count `i  1 e 2 0 ]
 [v _flag flag `i  1 e 2 0 ]
 "15
 [v _tmp tmp `uc  1 e 1 0 ]
 "18
+=======
+"10 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\main7seg.c
+[v _count count `i  1 e 2 0 ]
+[v _flag flag `i  1 e 2 0 ]
+"11
+[v _tmp tmp `uc  1 e 1 0 ]
+"14
+>>>>>>> c32a19bcc4e44857c24f46ad81ebde8e039e8bde
 [v _main main `(v  1 e 1 0 ]
 {
 "64
@@ -179,6 +196,14 @@
 "109
 } 0
 "11 C:\Users\pavao\OneDrive\Documentos\UFOP\CAM210-main\CAM210-main\7segm.X\display7s.c
+[v _display7s display7s `(uc  1 e 1 0 ]
+{
+[v display7s@v v `uc  1 a 1 wreg ]
+[v display7s@v v `uc  1 a 1 wreg ]
+[v display7s@v v `uc  1 a 1 0 ]
+"50
+} 0
+"11 C:\Users\pavao\Documentos\UFOP\C-digos-PIC\7segm.X\display7s.c
 [v _display7s display7s `(uc  1 e 1 0 ]
 {
 [v display7s@v v `uc  1 a 1 wreg ]
