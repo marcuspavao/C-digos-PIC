@@ -15,6 +15,7 @@
 #define BT3 PORTBbits.RB2
 #define BT_CLEAR PORTBbits.RB3
 #define BACK PORTBbits.RB4
+#define SHIFT PORTBbits.RB5
 
 void main(void) 
 {
@@ -87,7 +88,13 @@ void main(void)
             __delaywdt_ms(200);
         }
         
-        CLRWDT();   
+//        if(SHIFT == 0)
+//        {   
+//            Lcd_Cmd(LCD_SHIFT_LEFT);
+//            __delaywdt_ms(400);
+//        }
+        
+        CLRWDT();       
     }
     return;
 }

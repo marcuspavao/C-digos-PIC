@@ -1,6 +1,10 @@
 /* File:   Prática 3
  * Author: Marcus Vinícius Fernandes Pavão de Souza */
 
+// Ao usar o _delay_ms faz com que a CPU pare, ou seja, não é 
+// possível realizar nenhuma outra ação, devido a isso o uso de
+// Timers é essencial
+
 #include "configbits.h"
 #define _XTAL_FREQ 8000000
 #include <xc.h>
@@ -60,46 +64,46 @@ void main(void)
 }
 
 void interrupt isr(void){
-//    if (INTCONbits.INT0F == 1)
-//    {
-//        INTCONbits.INT0F = 0; 
-//        tmp = 0;
-//        flag = 1;
-//    }
-//    if(INTCON3bits.INT2IF == 1)
-//    {
-//        INTCON3bits.INT2IF = 0;
-//        LATD = display7s(tmp);
-//        tmp++;
-//    }
-//    if(INTCON3bits.INT1IF == 1)
-//    {
-//        INTCON3bits.INT1IF = 0;
-//        tmp = tmp - 1;
-//        LATD = display7s(tmp);
-//    }
-//    if (INTCONbits.TMR0IF == 1)
-//    {
-//        INTCONbits.TMR0IF = 0; 
-//        TMR0 = 131;
-//        count ++;
-//        if (count == 250)
-//        {
-//            count = 0;
-//            LATBbits.LATB1 = ~LATBbits.LATB1;
-//            LATD = display7s(tmp);
-//            tmp++;
-//            if(tmp == 10 && flag == 1)
-//            {
-//                INTCONbits.TMR0IE = 0;
-//                __delaywdt_ms(1000);
-//                LATD = display7s(0);                
-//            }
-//            if (tmp > 15)
-//            {
-//                tmp = 0;
-//            }
-//        }
-//        
-//    }
+    if (INTCONbits.INT0F == 1)
+    {
+        INTCONbits.INT0F = 0; 
+        tmp = 0;
+        flag = 1;
+    }
+    if(INTCON3bits.INT2IF == 1)
+    {
+        INTCON3bits.INT2IF = 0;
+        LATD = display7s(tmp);
+        tmp++;
+    }
+    if(INTCON3bits.INT1IF == 1)
+    {
+        INTCON3bits.INT1IF = 0;
+        tmp = tmp - 1;
+        LATD = display7s(tmp);
+    }
+    if (INTCONbits.TMR0IF == 1)
+    {
+        INTCONbits.TMR0IF = 0; 
+        TMR0 = 131;
+        count ++;
+        if (count == 250)
+        {
+            count = 0;
+            LATBbits.LATB1 = ~LATBbits.LATB1;
+            LATD = display7s(tmp);
+            tmp++;
+            if(tmp == 10 && flag == 1)
+            {
+                INTCONbits.TMR0IE = 0;
+                __delaywdt_ms(1000);
+                LATD = display7s(0);                
+            }
+            if (tmp > 15)
+            {
+                tmp = 0;
+            }
+        }
+        
+    }
 }
